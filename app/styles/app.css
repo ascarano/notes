@@ -57,15 +57,17 @@ html, body {
 }
 
 .content {
-  background: #A9E8CC;
+  background: rgba(255, 255, 255, 0.1);
   min-height: 99px;
   max-width: 100%;
+  color: white;
 }
 
 .title {
-  background: #E4EFB6;
+  background: rgba(193, 193, 193, 0.1);
   min-height: 49px;
   max-width: 100%;
+  color: white;
 }
 
 textarea {
