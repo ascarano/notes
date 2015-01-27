@@ -7,7 +7,8 @@ export default Ember.ArrayController.extend({
       var title = this.get('noteTitle');
 
       if (!body){
-        alert('Please add text to create note');
+        // alert('Please add text to create note');
+        this.get('flashes').danger('Please add content');
         return;
       }
       var note = this.store.createRecord('note', {
