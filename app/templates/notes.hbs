@@ -1,0 +1,43 @@
+{{outlet}}
+<div class="columns two">
+  <div class="column title">
+    {{textarea placeholder="Add a title!" value=noteTitle class='title'}}
+  </div>
+  <div class="column head">
+    {{showdown-addon noteTitle}}
+  </div>
+</div>
+
+<div class='columns two'>
+  <div class='column content'>
+    {{textarea placeholder="Add a note!" value=noteCopy class='content'}}
+  </div>
+  <div class='column body'>
+    {{showdown-addon noteCopy}}
+  </div>
+</div>
+
+<div class='columns two'>
+  <div class='column'>
+    <p>
+    </p>
+  </div>
+  <div class='column create'>
+    <button {{action 'newNote'}}>Save Note</button>
+  </div>
+</div>
+<hr>
+
+
+<div class="columns two topper">
+  {{#each note in model}}
+  <div class="column topper">
+    <div class="head saved">
+      {{note.title}}
+    </div>
+    <div class="body saved">
+      {{note.body}}
+    </div>
+  </div>
+  {{/each}}
+</div>
