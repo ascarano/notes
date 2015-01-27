@@ -27,78 +27,105 @@ html, body {
 }
 
 .two.columns .column {
-  width: 45%;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 50%;
 }
 
 .head {
   background: #E4EFB6;
-  min-height: 54px;
+  min-height: 67px;
   padding-left: 10px;
+  width: 98%;
+  border-bottom: 5px solid #44465B;
 }
 
 .body {
   background: #A9E8CC;
-  min-height: 104px;
+  min-height: 100px;
   padding-left: 10px;
+  width: 98%;
 }
 
 .head.saved {
   background: #E4EFB6;
   min-height: 53px;
   padding: 10px;
+  width: 98%;
+  border-bottom: 5px solid #44465B;
 }
 
 .body.saved {
   background: #A9E8CC;
-  min-height: 104px;
+  min-height: 100px;
   padding: 10px;
+  width: 98%;
 }
 
 .content {
-  background: rgba(255, 255, 255, 0.1);
   min-height: 99px;
-  max-width: 100%;
+  max-width: 98%;
   color: white;
+  width: 98%;
 }
 
 .title {
-  background: rgba(193, 193, 193, 0.1);
-  min-height: 49px;
-  max-width: 100%;
-  color: white;
+  max-width: 98%;
 }
 
 textarea {
-  width: 100%;
+  width: 98%;
   height: 100%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.18);
   border: none;
   font-size: large;
-  color: #44465B;
+  color: #ffffff;
+  padding: 10px;
 }
 
 textarea:focus {
   border: none;
-  outline: none#ffffff;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-button {
+button.save {
   width: 50%;
+  border: none;
+  background: #82e59c;
+  height: 30px;
+  font-size: large;
+  color: #44465B;
+  margin-left: 50%;
+  height: 100%;
+}
+
+button.delete {
+  width: 48%;
   border: none;
   background: #e2809f;
   height: 30px;
   font-size: large;
   color: #44465B;
+  margin-left: 50%;
+  height: 100%;
 }
 
-button:hover {
+button.delete:hover {
   background: #e04c7d;
+}
+
+button.save:hover {
+  background: #21c326;
+}
+
+h3 {
+  text-align: center;
 }
 
 .topper {
   margin-top: 20px;
+}
+
+.bottom {
+  margin-bottom: 40px;
 }
 
 hr  {
@@ -109,4 +136,22 @@ hr  {
   background-image:    -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,255.75), rgba(255,255,255,0));
   background-image:     -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,255.75), rgba(255,255,255,0));
   background-image:      -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,255.75), rgba(255,255,255,0));
+}
+
+.full {
+  background: #82e59c;
+  height: 3rem;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.notice {
+  margin-top: 60px;
+}
+
+h1  {
+  color: white;
 }

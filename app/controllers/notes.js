@@ -17,6 +17,15 @@ export default Ember.ArrayController.extend({
       this.set('noteCopy', '');
       this.set('noteTitle', '');
       note.save();
-    }
+    },
+
+    deleteNote: function(id) {
+      var _this = this;
+      var note = this.store.find('note', id).then(function(note) {
+        note.deleteRecord();
+        note.save();
+      });
+      this.get('flashes').danger('Note Delted Successfully!');
+    },
   }
 });
