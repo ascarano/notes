@@ -21,7 +21,6 @@ export default Ember.ArrayController.extend({
     },
 
     deleteNote: function(id) {
-      var _this = this;
       var note = this.store.find('note', id).then(function(note) {
         note.deleteRecord();
         note.save();
