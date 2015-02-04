@@ -11,48 +11,35 @@
 </div>
 
 
+
+
 <div class="columns two">
-  <div class="column title">
-    {{textarea placeholder="Add a title!" value=noteTitle class='title'}}
+  <div class="column">
+    <div class="title">
+      {{textarea placeholder="Add a title!" value=noteTitle class='title'}}
+    </div>
+    <div class="content">
+      {{textarea placeholder="Add a note!" value=noteCopy class='content'}}
+    </div>
   </div>
-  <div class="column head">
-    <h3>{{noteTitle}}</h3>
+  <div class="column">
+    <div class="head">
+      <strong>{{noteTitle}}</strong>
+    </div>
+    <div class="body">
+      {{showdown-addon noteCopy}}
+    </div>
+    <div class='create bottom'>
+      <button class="save" {{action 'newNote'}}>Save Note</button>
+    </div>
   </div>
 </div>
 
-<div class='columns two'>
-  <div class='column content'>
-    {{textarea placeholder="Add a note!" value=noteCopy class='content'}}
-  </div>
-  <div class='column body'>
-    {{showdown-addon noteCopy}}
-  </div>
-</div>
 
-<div class='columns two bottom'>
-  <div class='column'>
-    <p>
-    </p>
-  </div>
-  <div class='column create'>
-    <button class="save" {{action 'newNote'}}>Save Note</button>
-  </div>
-</div>
 <hr>
-
 
 <div class="columns two topper">
   {{#each note in model}}
-  <div class="column topper">
-    <div class="head saved">
-      <h3>{{note.title}}</h3>
-    </div>
-    <div class="body saved">
-      {{showdown-addon note.body}}
-    </div>
-    <div class='delete'>
-      <button class="delete" {{action 'deleteNote' note.id}} >Delete</button>
-    </div>
-  </div>
+  {{local-note note=note deleteNote="deleteNote"}}
   {{/each}}
 </div>

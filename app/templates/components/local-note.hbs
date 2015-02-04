@@ -1,0 +1,16 @@
+  <div class="column topper note-actions">
+    <div class="head saved">
+      <h3>{{note.title}}</h3>
+    </div>
+    <div class="body saved">
+      {{showdown-addon note.body}}
+    </div>
+    <div class='delete'>
+      <button class="delete" {{action 'deleteNote' note}} >Delete</button>
+    </div>
+  </div>
+
+
+
+
+{{yield}}
