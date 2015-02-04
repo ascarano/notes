@@ -27,7 +27,7 @@
       <strong>{{noteTitle}}</strong>
     </div>
     <div class="body">
-      {{showdown-addon noteCopy}}
+      {{markdown-to-html markdown=noteCopy}}
     </div>
     <div class='create bottom'>
       <button class="save" {{action 'newNote'}}>Save Note</button>
